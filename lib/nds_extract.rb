@@ -18,5 +18,19 @@ def directors_totals(nds)
   #
   #
   # Be sure to return the result at the end!
-  nil
+  
+  # pp(nds)
+  
+  totals = {}
+  
+  for i in 0...nds.length
+    
+    total = 0
+    for j in 0...nds[i][:movies].length
+      total += nds[i][:movies][j][:worldwide_gross]
+    end
+    totals[nds[i][:name]] = total
+  end
+  
+  totals
 end
