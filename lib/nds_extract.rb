@@ -23,13 +23,13 @@ def directors_totals(nds)
   
   totals = {}
   
-  for i in 0...nds.length
+  for director in 0...nds.length
     
     total = 0
-    for j in 0...nds[i][:movies].length
-      total += nds[i][:movies][j][:worldwide_gross]
+    for movie_data in 0...nds[director][:movies].length
+      total += nds[director][:movies][movie_data][:worldwide_gross]
     end
-    totals[nds[i][:name]] = total
+    totals[nds[director][:name]] = total
   end
   
   totals
